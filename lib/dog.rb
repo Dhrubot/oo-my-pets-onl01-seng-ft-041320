@@ -1,17 +1,18 @@
 class Dog
   # code goes here
   
-  attr_accessor :owner, :mood
+  attr_accessor :owner, :mood, :cats, :dogs
   attr_reader :name
   
   @@all = []
-  @@cats = []
-  @@dogs = []
+
   def initialize(name, owner, mood = "nervous")
     @name = name
     @owner = owner
     @mood = mood
     @@all << self
+    @cats = []
+    @dogs = []
   end
   
   def self.all 
@@ -19,6 +20,6 @@ class Dog
   end
   
   def cats 
-    @@cats
+    @cats
   end
 end
