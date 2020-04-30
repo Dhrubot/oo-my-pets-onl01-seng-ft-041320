@@ -8,19 +8,19 @@ class Owner
   def initialize(name, species = "human")
     @name = name
     @species = species
-    @all << self
+    @@all << self
   end
   
   def self.all
-    @all
+    @@all
   end
   
   def self.count
-    @all.size
+    @@all.size
   end
   
   def self.reset_all
-    @all.delete
+    @@all.delete
   end
   def say_species
     "I am a #{@species}."
