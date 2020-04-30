@@ -35,15 +35,15 @@ class Owner
   end
   
   def buy_cat(name)
-    @@pets[:cats] << Cat.new(name, self)
+    Cat.new(name, validates_numericality_of)
   end
   
   def buy_dog(name)
-    @@pets[:dogs] << Dog.new(name, self)
+    Dog.new(name, self)
   end
   
   def walk_dogs
-    @@pets[:dogs].each {|dog| dog.mood = "happy"}
+    dogs.each
   end
   
   def feed_cats
