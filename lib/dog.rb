@@ -19,6 +19,6 @@ class Dog
   end
   
   def cats 
-    @@all.map {|pet| pet.object = Cat}
+    @@cats
   end
 end
