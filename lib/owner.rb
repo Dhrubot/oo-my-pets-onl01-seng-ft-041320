@@ -27,7 +27,7 @@ class Owner
   end
   
   def cats
-    Cats.all.
+    Cats.all.select {|cat| cat.owner == self.name}
   end
   
   def dogs
