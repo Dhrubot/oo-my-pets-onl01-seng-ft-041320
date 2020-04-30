@@ -11,15 +11,10 @@ class Dog
     @owner = owner
     @mood = mood
     @@all << self
-    @cats = []
-    @dogs = []
   end
   
   def self.all 
     @@all
   end
   
-  def cats 
-    @cats
-  end
 end
