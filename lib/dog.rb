@@ -16,4 +16,8 @@ class Dog
   def self.all 
     @@all
   end
+  
+  def cats 
+    @@all.map {|pet| pet.object = Cat}
+  end
 end
